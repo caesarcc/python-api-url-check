@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <body>
+
+        <div>
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="card m-auto" style="max-width:850px">
+                        <div class="card-body align-items-center">
+                            <h2 style="height: 80px;">🌴 404 - <strong>Página não encontrada 🙁</strong><br></h4>
+                            <p></p>
+                            <a href="{{ url_for('index_blueprint.index') }}">
+                                <button class="btn btn-primary" id="go-home" type="button"
+                                        style="width: 200px;height: 51px;background-color: rgb(41,41,41);transition: border 0.2s ease;">
+                                    Voltar ao início
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+{% endblock %}
