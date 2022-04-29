@@ -49,3 +49,6 @@ torchaudio
 transformers
 sklearn
 enelvo
+seaborn
+spacy
+wordcloud
