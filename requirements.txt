@@ -52,5 +52,4 @@ enelvo
 seaborn
 spacy
 wordcloud
-wandb
 lime
