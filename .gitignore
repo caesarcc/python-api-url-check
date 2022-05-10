@@ -111,6 +111,7 @@ venv.bak/
 
 # Corpus de treino
 Fake.br-Corpus/
+FakeWhatsApp.Br/
 # Corpus pre-processado
 dados/
 # Base do aplicativo
