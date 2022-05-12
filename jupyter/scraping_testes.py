@@ -1,13 +1,19 @@
 import newspaper
+import requests
+from requests.exceptions import ConnectionError, InvalidURL, MissingSchema
 
-cnn_paper = newspaper.build('https://g1.globo.com/fato-ou-fake/', language='pt')
+#article = newspaper.Article('https://g1.globo.com/politica/noticia/2022/05/10/senado-aprova-elevar-para-70-anos-idade-limite-para-nomeacao-no-stf-e-em-tribunais-superiores.ghtml', language='pt')
+#article.download()
+#article.parse()
+#print(article.text)
 
-for article in cnn_paper.articles[:3]:
-    print(article.url)
+#res = requests.get('https://g1.globo.co/politica/noticia/2022/05/10/senado-aprova-elevar-para-70-anos-idade-limite-para-nomeacao-no-stf-e-em-tribunais-superiores.ghtml')
 
-article = newspaper.Article('http://www.e-farsas.com/respostas-para-10-das-duvidas-mais-recorrentes-sobre-o-e-farsas-e-as-fake-news.html')
-article.download()
-print(article.html)
-article.parse()
-print(article.text)
-
+article = newspaper.Article('https://g1.globo.co/politica/noticia/2022/05/10/senado-aprova-elevar-para-70-anos-idade-limite-para-nomeacao-no-stf-e-em-tribunais-superiores.ghtml', language='pt')
+try:
+    res = requests.get('https://g1.globo.com/politica/noticia/2022/05/10/senado-aprova-elevar-para-70-anos-idade-limite-para-nomeacao-no-stf-e-em-tribunais-superiores.ghtml')
+    article.download()
+    article.parse()
+    print(article.text)
+except (MissingSchema, ConnectionError, InvalidURL) as ex:
+    print(ex)
