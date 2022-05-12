@@ -53,3 +53,4 @@ seaborn
 spacy
 wordcloud
 lime
+emoji
