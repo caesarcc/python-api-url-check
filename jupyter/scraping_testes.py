@@ -11,7 +11,7 @@ from requests.exceptions import ConnectionError, InvalidURL, MissingSchema
 
 article = newspaper.Article('https://g1.globo.co/politica/noticia/2022/05/10/senado-aprova-elevar-para-70-anos-idade-limite-para-nomeacao-no-stf-e-em-tribunais-superiores.ghtml', language='pt')
 try:
-    res = requests.get('https://g1.globo.com/politica/noticia/2022/05/10/senado-aprova-elevar-para-70-anos-idade-limite-para-nomeacao-no-stf-e-em-tribunais-superiores.ghtml')
+    #res = requests.get('https://g1.globo.com/politica/noticia/2022/05/10/senado-aprova-elevar-para-70-anos-idade-limite-para-nomeacao-no-stf-e-em-tribunais-superiores.ghtml')
     article.download()
     article.parse()
     print(article.text)
